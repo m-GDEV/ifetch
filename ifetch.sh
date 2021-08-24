@@ -1,5 +1,18 @@
 #! /bin/sh
+#    _ ____     __       __  
+   #(_) __/__  / /______/ /_ 
+  #/ / /_/ _ \/ __/ ___/ __ \
+ #/ / __/  __/ /_/ /__/ / / /
+#/_/_/  \___/\__/\___/_/ /_/ 
 
+#By Musa Ahmed
+
+#Date Created: August 23, 2021
+#Last Modified: August 23, 2021
+
+#If you like this be sure to leave it a star on Github!
+
+# ---
 # Colors
 NC='\033[0m' # No Color
 WHITE='\033[1;97m'
@@ -11,6 +24,8 @@ MAGENTA='\033[1;95m'
 CYAN='\033[1;96m'
 YELLOW='\e[1;93m'
 
+
+# ---
 # Collecting required info
 DATE=$(date)
 
@@ -22,7 +37,6 @@ SHELL=$(ps -p$PPID | sed -n 2p | awk '{print $4}')
 USER=$(echo $USER)
 HOST=$(uname -n)
 UPTIME=$(uptime -p | cut -c 3-)
-#TERM=$(ps -p$PPID | sed -n 2p | awk '{print $1}' | xargs ps -P | sed -n 2p | awk '{print $6}')
 CPU=$(cat /proc/cpuinfo | sed -n 5p | cut -f3- -d " ")
 GPU=$(lspci | grep VGA | awk -F":" '{print $3}')
 
@@ -32,7 +46,8 @@ MEMTOTAL=$(free -m | sed  -n 2p | awk '{print $2}')
 #ROOTTOTAL=$(df -h | grep -w / | awk '{print $2}')
 #ROOTPER=$(df | grep -w / | awk '{print $5}')
 
-#green, red, blue, cyan, magenta
+
+# ---
 # Printing info
 echo -e "
 	    ${GREEN}$DATE
