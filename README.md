@@ -1,6 +1,6 @@
 # ifetch
 An extremely lightweight alternative to neofetch, pfetch, ufetch, etc.
-**If you like this project be sure to give it a star!**
+***If you like this project be sure to give it a star!***
 
 ![ifetch demo](demo.png)
 
