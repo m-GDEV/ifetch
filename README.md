@@ -16,7 +16,13 @@ ASCII art for your distro. Instead, ifetch prints a small cute ASCII Tux.
 ## Another fetch program?
 Yes. I made this as a fun personal project and because I wanted to make a more lightweight version of other system fetchers; specifically neofetch.
 This project was made in the spirit of being lightweight and small. In the spirit of being lightweight, ***ifetch is less than 100 lines of code!***
+While writing this program I avoided using any third-party programs to gather the information; further adding to its simplicity and it being lightweight.
 
+
+## Dependencies
+	* A Linux system (currently, ifetch does not support any other OS).
+	* Core Linux system utilities (date, cat, grep, cut, rev, uname, ps, echo, uptime, lspci, free, awk, sed)
+**Do not be intimidated! You most likely have all of these pre-installed on your system**
 
 ## Contributions
 Although I think I've added all the relevant infomation needed to the script, feel free to create a pull request. I'll take a look
