@@ -22,7 +22,7 @@ While writing this program I avoided using any third-party programs to gather th
 ## Dependencies
 	* A Linux system (currently, ifetch does not support any other OS).
 	* Core Linux system utilities (date, cat, grep, cut, rev, uname, ps, echo, uptime, lspci, free, awk, sed)
-**Do not be intimidated! You most likely have all of these pre-installed on your system**
+**Do not be intimidated! You most likely have all of these pre-installed on your system.**
 
 ## Contributions
 Although I think I've added all the relevant infomation needed to the script, feel free to create a pull request. I'll take a look
