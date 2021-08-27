@@ -9,7 +9,7 @@ An extremely lightweight alternative to neofetch, pfetch, ufetch, etc.
 ## What is this?
 ifetch is meant to be an extremely lightweight alternative to other fetch programs such as
 **neofetch, pfetch, ufetch**, etc. It fetches the most important information about your system
-including the i **OS, Kernel, Shell**, and more. ifetch ***DOES NOT*** waste time printing custom
+including the **OS, Kernel, Shell**, and more. ifetch ***DOES NOT*** waste time printing custom
 ASCII art for your distro. Instead, ifetch prints a small cute ASCII Tux.
 
 
