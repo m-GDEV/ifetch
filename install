@@ -1,0 +1,15 @@
+#! /bin/sh
+
+if [[ -x /usr/bin/curl ]] || [[ -x /bin/curl ]]; then
+	curl https://raw.githubusercontent.com/m-GDEV/ifetch/master/ifetch -o /tmp/ifetch
+else
+	echo "Error Occured. Please create an issue on Github."
+	exit 1
+fi
+
+
+echo "Installing program to /usr/local/bin"
+cp /tmp/ifetch /usr/local/bin
+chmod +x /usr/local/bin
+
+echo -e "ifetch installed! Just type \"ifetch\" in your terminal."
