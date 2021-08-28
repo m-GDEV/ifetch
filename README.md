@@ -28,7 +28,7 @@ While writing this program I avoided using any third-party programs to gather th
 
 ## Installaion
 - Run this one-line install command in your terminal: 
-	curl -s https://raw.githubusercontent.com/m-GDEV/ifetch/master/install | sh
+	`curl -s https://raw.githubusercontent.com/m-GDEV/ifetch/master/install | sh`
 - Clone the git repository and copy the "ifetch" file to a directory in your $PATH
 
 
