@@ -8,7 +8,7 @@ else
 fi
 
 
-echo "Installing program to /usr/local/bin"
+echo -e "\n\nInstalling program to /usr/local/bin"
 cp /tmp/ifetch /usr/local/bin
 chmod +x /usr/local/bin/ifetch
 
