@@ -9,7 +9,7 @@ fi
 
 
 echo -e "\n\nInstalling program to /usr/local/bin"
-cp /tmp/ifetch /usr/local/bin
+sudo cp /tmp/ifetch /usr/local/bin
 chmod +x /usr/local/bin/ifetch
 
 echo "ifetch installed!"
