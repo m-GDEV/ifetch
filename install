@@ -12,4 +12,5 @@ echo "Installing program to /usr/local/bin"
 cp /tmp/ifetch /usr/local/bin
 chmod +x /usr/local/bin/ifetch
 
-echo -e "ifetch installed! Just type \"ifetch\" in your terminal."
+echo "ifetch installed!"
+ifetch
