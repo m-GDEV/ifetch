@@ -23,12 +23,18 @@ While writing this program I avoided using any third-party programs to gather th
 	* A Linux system (currently, ifetch does not support any other OS).
 	* Core Linux system utilities (date, cat, grep, cut, rev, uname, ps, echo, uptime, lspci, free, awk, sed)
 	* Curl (a command line http file download utility).
+	* Bash 
 **Do not be intimidated! You most likely have all of these pre-installed on your system.**
 
 
 ## Installaion
-- Run this one-line install command in your terminal: <br>
+
+#### Option #1 
+1. Install curl on your system
+2. Run this one-line install command in your terminal: <br>
 	`curl -s https://raw.githubusercontent.com/m-GDEV/ifetch/master/install | bash`
+
+#### Option #2
 - Clone the git repository and copy the "ifetch" file to a directory in your $PATH
 
 
