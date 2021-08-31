@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 if [[ -x /usr/bin/curl ]] || [[ -x /bin/curl ]]; then
 	curl https://raw.githubusercontent.com/m-GDEV/ifetch/master/ifetch -o /tmp/ifetch
