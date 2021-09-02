@@ -49,7 +49,7 @@ MEMTOTAL=$(free -m | sed  -n 2p | awk '{print $2}')
 
 # ---
 # Printing info
-echo "
+echo -e "
 	    ${GREEN}$DATE
 	    ${RED}${USER}@${HOST}
 	    ${WHITE}-----${NC}
