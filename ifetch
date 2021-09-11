@@ -32,9 +32,9 @@ DATE=$(date)
 DISTRO=$(cat /etc/*-release | grep PRETTY_NAME= | cut -c 14- | rev | cut -c 2- | rev)
 KERNEL=$(uname -r)
 ARCH=$(uname -m)
-SHELL=$(ps -p$PPID | sed -n 2p | awk '{print $4}')
+USER_SHELL=$(ps -p$PPID | sed -n 2p | awk '{print $4}')
 
-USER=$(echo $USER)
+USERNAME=$(echo $USER)
 HOST=$(uname -n)
 UPTIME=$(uptime -p | cut -c 3-)
 CPU=$(cat /proc/cpuinfo | sed -n 5p | cut -f3- -d " ")
@@ -51,11 +51,11 @@ MEMTOTAL=$(free -m | sed  -n 2p | awk '{print $2}')
 # Printing info
 echo -e "
 	    ${GREEN}$DATE
-	    ${RED}${USER}@${HOST}
+	    ${RED}${USERNAME}@${HOST}
 	    ${WHITE}-----${NC}
 ${YELLOW}    .--.    ${BLUE}OS:${NC} $DISTRO $ARCH
 ${YELLOW}   |o_o |   ${CYAN}Kernel:${NC} $KERNEL
-${YELLOW}   |:_/ |   ${MAGENTA}Shell:${NC} $SHELL
+${YELLOW}   |:_/ |   ${MAGENTA}Shell:${NC} $USER_SHELL
 ${YELLOW}  //   \ \  ${GREEN}Uptime:${NC}$UPTIME
 ${YELLOW} (|     | ) ${RED}CPU:${NC} $CPU
 ${YELLOW}/'\_   _/\`\ ${BLUE}GPU:${NC}$GPU
