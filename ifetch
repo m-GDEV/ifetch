@@ -1,9 +1,9 @@
 #! /bin/sh
-#    _ ____     __       __  
-   #(_) __/__  / /______/ /_ 
-  #/ / /_/ _ \/ __/ ___/ __ \
- #/ / __/  __/ /_/ /__/ / / /
-#/_/_/  \___/\__/\___/_/ /_/ 
+#    _ ____     __       __
+#(_) __/__  / /______/ /_
+#/ / /_/ _ \/ __/ ___/ __ \
+#/ / __/  __/ /_/ /__/ / / /
+#/_/_/  \___/\__/\___/_/ /_/
 
 #By Musa Ahmed
 
@@ -40,8 +40,8 @@ UPTIME=$(uptime -p | cut -c 3-)
 CPU=$(cat /proc/cpuinfo | sed -n 5p | cut -f3- -d " ")
 GPU=$(lspci | grep VGA | awk -F":" '{print $3}')
 
-MEMUSED=$(free -m | sed  -n 2p | awk '{print $3}')
-MEMTOTAL=$(free -m | sed  -n 2p | awk '{print $2}')
+MEMUSED=$(free --mega | sed  -n 2p | awk '{print $3}')
+MEMTOTAL=$(free --mega | sed  -n 2p | awk '{print $2}')
 #ROOTUSED=$(df -h | grep -w / | awk '{print $3}')
 #ROOTTOTAL=$(df -h | grep -w / | awk '{print $2}')
 #ROOTPER=$(df | grep -w / | awk '{print $5}')
@@ -50,17 +50,17 @@ MEMTOTAL=$(free -m | sed  -n 2p | awk '{print $2}')
 # ---
 # Printing info
 echo -e "
-	    ${GREEN}$DATE
-	    ${RED}${USERNAME}@${HOST}
-	    ${WHITE}-----${NC}
+${GREEN}$DATE
+${RED}${USERNAME}@${HOST}
+${WHITE}-----${NC}
 ${YELLOW}    .--.    ${BLUE}OS:${NC} $DISTRO $ARCH
 ${YELLOW}   |o_o |   ${CYAN}Kernel:${NC} $KERNEL
 ${YELLOW}   |:_/ |   ${MAGENTA}Shell:${NC} $USER_SHELL
 ${YELLOW}  //   \ \  ${GREEN}Uptime:${NC}$UPTIME
 ${YELLOW} (|     | ) ${RED}CPU:${NC} $CPU
 ${YELLOW}/'\_   _/\`\ ${BLUE}GPU:${NC}$GPU
-${YELLOW}\___)=(___/ ${CYAN}Memory:${NC} $MEMUSED MiB / $MEMTOTAL MiB
+${YELLOW}\___)=(___/ ${CYAN}Memory:${NC} $MEMUSED MB / $MEMTOTAL MB
 "
 
 # Addtional
-#${MAGENTA}Root FS:${NC} $ROOTUSED GiB / $ROOTTOTAL GiB  | $ROOTPER Used	
+#${MAGENTA}Root FS:${NC} $ROOTUSED GiB / $ROOTTOTAL GiB  | $ROOTPER Used
